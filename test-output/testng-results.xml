@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-10T14:55:35 PST" name="Default suite" finished-at="2023-11-10T14:55:52 PST" duration-ms="17003">
+  <suite started-at="2023-11-11T17:53:48 PST" name="Default suite" finished-at="2023-11-11T17:54:12 PST" duration-ms="24256">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runners.RunnerForSalesForce@7bba5817]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.RunnerForSalesForce@7bba5817]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-11-10T14:55:35 PST" name="Default test" finished-at="2023-11-10T14:55:52 PST" duration-ms="17003">
-      <class name="com.cucumber.runners.RunnerForSalesForce">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.cucumber.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-10T14:55:35 PST" name="setUpClass" finished-at="2023-11-10T14:55:35 PST" duration-ms="198" status="PASS">
+    <test started-at="2023-11-11T17:53:48 PST" name="Default test" finished-at="2023-11-11T17:54:12 PST" duration-ms="24256">
+      <class name="com.automation.runners.RunnerForSalesForce">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.automation.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-11T17:53:48 PST" name="setUpClass" finished-at="2023-11-11T17:53:48 PST" duration-ms="494" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@12e0f1cb]]>
+                <![CDATA[org.testng.TestRunner@3c0e00a8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-10T14:55:35 PST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-10T14:55:52 PST" duration-ms="16755" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-11T17:53:48 PST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-11T17:54:04 PST" duration-ms="15148" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,11 +37,44 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-10T14:55:52 PST" name="tearDownClass" finished-at="2023-11-10T14:55:52 PST" duration-ms="3" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-11T17:54:04 PST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-11T17:54:12 PST" duration-ms="8539" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check login is sucessful with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login into salesforce application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Login | Salesforce] but found [Lightning Experience]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Login | Salesforce] but found [Lightning Experience]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.automation.stepdefinitions.SalesForceStepDefinition.user_is_navigated_to_homepage(SalesForceStepDefinition.java:79)
+at ✽.user is navigated to homepage(file:///C:/Users/pradh/eclipse-workspace/CucumberSalesForceLogin/src/test/resources/features/SalesLogin.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.automation.runners.RunnerForSalesForce@7bba5817]" started-at="2023-11-11T17:54:12 PST" name="tearDownClass" finished-at="2023-11-11T17:54:12 PST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.cucumber.runners.RunnerForSalesForce -->
+      </class> <!-- com.automation.runners.RunnerForSalesForce -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
